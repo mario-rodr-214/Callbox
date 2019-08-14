@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background:  #eee;
+}
+
+header {
+  background: #1561ad;
+  height: 66px;
+}
+header * {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+header .logo {
+  float: left;
+  height: inherit;
+
+  margin-left: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .logo-text {
+  margin: 10px;
+}
+
+header .logo-text span {
+  color: aqua;
+}
+header ul {
+  float: right;
+
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  transition: 0.5s;
+}
+
+header ul li {
+  float: left;
+  position: relative;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 66px;
+  right: 0px;
+
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+  transition: 5.5s;
+}
+header ul li ul li {
+  width: 100%;
+}
+header ul li ul li a {
+  padding: 10px;
+  color: rgb(10, 10, 10);
+  background: white;
+  transition: 0.5s;
+}
+header ul li ul li a:hover {
+  background: #ddd;
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.2);
+}
+
+header ul li a {
+  display: block;
+  padding: 23px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  background: #1dbab4;
+  transition: 0.5s;
+  color: white;
+}
+header .menu-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  header {
+    position: relative;
+  }
+
+  header ul {
+    width: 100%;
+    background: #1c77ac;
+    max-height: relative;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+    transition: 0.5s;
+    overflow-x: hidden;
+  }
+  .show {
+    max-height: 100em;
+  }
+
+  .nav li .dropdown-menu {
+
+    position: static;
+
+  }
+  header ul li {
+    width: 100%;
+  }
+
+  header ul li ul {
+    position: static;
+    display: block;
+    width: absolute;
+    background: inherit;
+  }
+
+  header ul li ul li a {
+    padding: 10px;
+    color: white;
+    background: #1561ad;
+    padding-left: 40px;
+    color: white;
+  }
+  header ul li ul li a:hover {
+    background: #334;
+  }
+
+  header .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.9em;
+    font-weight: bold;
+  }
+  header .logo {
+    margin-left: 0.5em;
+  }
+}
